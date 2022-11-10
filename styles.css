@@ -1,0 +1,177 @@
+.debug_border{
+	border: 3px solid red;
+}
+/* Html is the parent element of body, so set its height first to take entire screen */
+html {
+	height: 100%;
+}
+/* Set body to take all of html heigh, since we assigned html a value, body has some reference to how big it should be */
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+  /* border: 5px solid red; */
+}
+/* Let flex container grow to full screen since navbar doesn't matter */
+.flex_container{
+	flex-grow: 1;
+	/* margin: 0; */
+	margin-right:auto;
+	margin-left:auto;
+	/* Now that website is responsive, I am looking at this and wondering if this even matter?? Wed (NOV 9)*/
+	min-height: 90%;
+	min-width: 100%;
+	display: flex;
+	flex-direction:column;
+	/* Elements will wrap if necessary */
+	/* flex-wrap: wrap; */
+	/* justify-content: center; */
+}
+.flex_container > div{
+	flex-grow: 1;
+}
+/* Centering google logo h1 element */
+#google_logo{
+	/* Not doing anything useful, repeat of margin. */
+	/* text-align: center; */
+	margin-right: auto;
+	margin-left: auto;
+	/* Not sure why I need to specify display flex..... when parent is flex container.
+	Ok so from my new understanding, I can only apply them to the div within the flex container. 
+	But if I want to align the items inside the div (the child elements) I need to change display to flex
+	to be able to apply the flex end property to its children. Search that helped (How to put elements inside div to bottom)
+	https://blog.hubspot.com/website/center-div-css#center-text-horizontally
+	*/
+	display: flex;
+	align-items: flex-end;
+	font-size: 28px;
+}
+#google_logo_child{
+	/* Helps to debug, look at box model in console */
+	padding: 10px;
+}
+#google_text{
+	font-size: 80px;
+}
+#google_images{
+	font-size: 15px; 
+	color: #0086f8; 
+	text-align:right; 
+	/* move 'images' text under google logo 0px on the x-axis, 20px up on the y-axis */
+	transform: translate(0px,-20px);
+}
+#google_search_box{
+	margin-right: auto;
+	margin-left: auto;
+}
+#search_bar{
+	/* Apparently border radius rounds out the corners */
+	border-radius: 25px;
+	margin-top: 7px;
+	/* Soften the border color, too black in contrast with white background */
+	border: .5px solid black;
+	height: 70%;
+	/* Add padding to input field for text */
+	padding-left: 20px;
+	/* background-image: url("search_icon.webp"); */
+	/* https://www.w3docs.com/snippets/css/how-to-align-placeholder-text-of-input-field-in-html.html 
+	
+	In case you want to center text inside search bar too*/
+	
+}
+@media(min-width: 450px){
+	#google_search_box{
+		height: 300px;
+		width: 450px;
+	}
+	#search_bar{
+		width: 100%;
+	}
+}
+@media(max-width: 449px){
+	#google_search_box{
+		height: 300px;
+		width: 350px;
+	}
+	#search_bar{
+		width: 90%;
+	}
+}
+
+#search_form{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 30%;
+	width: 100%;
+}
+#google_submit{
+	/* Match google styling */
+	border: 0 solid black;
+	height: 65%;
+	background-color: #f8f9fa;
+	color: #333437;
+}
+#search_form > div{
+	height: 50%;
+}
+
+/* 
+#google_footer{
+	display: flex;
+	margin-bottom: auto;
+}
+*/	
+/* For computers */
+@media(min-width: 521px){
+	.flex{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: flex-end;
+	}
+	.flex-item{
+		padding: 5px;
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+	.left-item{
+		margin-right: 3%;
+	}
+	.right-item{
+		margin-left: 3%;
+	}
+	.center-item{
+		margin-left: auto;
+		margin-right: auto;
+		/* Center the item, off because of longer text on left side 
+		than right side (maybe look for equal spacing keyword? I know I
+		saw something about that with flexbox)*/
+		padding-right: 6%;
+	}
+}
+/* For smartphone */
+@media (max-width: 520px){
+	.flex{
+		flex-wrap: wrap;
+		flex-direction:row;
+		align-items: center;
+		margin-bottom: auto;
+	}
+	.flex-item{
+		padding: 3px;
+		margin-bottom: 10px;
+		font-size: 12px;
+		text-align: center;
+	}
+
+}
+
+li{
+	/* Remove bullet points */
+	list-style: none;
+}
+a{	
+	/* remove underline from anchor tags */
+	text-decoration: none;
+}		
