@@ -47,7 +47,12 @@
 				<!-- Set search bar underneath form -->
 				<div class="row">
 					<div class="col">
+						<!-- Use formaction attribute on input element to pick an action for the form if we want different behavior for the buttons -->
 						<input id="google_submit" type="submit" value="Google Search">
+					</div>
+					<div class="col">
+						<!-- I guess type="hidden" isn't necessary, but why is value being used for name property and button name???? -->
+						<input id="lucky_submit" name="btnI" value="I'm Feeling Lucky" type="submit">
 					</div>
 				</div>
 				</form>
