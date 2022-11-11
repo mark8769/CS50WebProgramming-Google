@@ -108,17 +108,9 @@ a{
 	background-color: #f8f9fa;
 	color: #333437;
 }
-/* Move google submit and lucky submit buttons closer to each other */
-#google_submit{
-	margin-left: 50%;
-}
-#lucky_submit{
-	margin-right: 50%;
-}
-#search_form > div{
-	height: 50%;
-}
 /* Start adding responsiveness to website here */
+
+/* For computer responsiveness with search bar */
 @media(min-width: 450px){
 	#google_search_box{
 		height: 300px;
@@ -127,7 +119,18 @@ a{
 	#search_bar{
 		width: 100%;
 	}
+	#search_form > div{
+		height: 50%;
+	}
+	/* Move google submit and lucky submit buttons closer to each other */
+	#google_submit{
+		margin-left: 50%;
+	}
+	#lucky_submit{
+		margin-right: 50%;
+	}
 }
+/* For smartphone responsiveness with search bar */
 @media(max-width: 449px){
 	#google_search_box{
 		height: 300px;
@@ -136,8 +139,18 @@ a{
 	#search_bar{
 		width: 90%;
 	}
+	#search_form > div{
+		height: 50%;
+	}
+	/* Move google submit and lucky submit buttons closer to each other */
+	#google_submit{
+		margin-left: 30%;
+	}
+	#lucky_submit{
+		margin-right: 30%;
+	}
 }
-/* For computers */
+/* For computers (footer section)*/
 @media(min-width: 521px){
 	.flex{
 		display: flex;
@@ -165,7 +178,7 @@ a{
 		padding-right: 6%;
 	}
 }
-/* For smartphone */
+/* For smartphone (footer section)*/
 @media (max-width: 520px){
 	.flex{
 		flex-wrap: wrap;
