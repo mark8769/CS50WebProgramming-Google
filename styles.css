@@ -1,3 +1,4 @@
+/* For debugging, have been using mostly the firefox console (Its better than google's) */
 .debug_border{
 	border: 3px solid red;
 }
@@ -46,13 +47,11 @@ body {
 	align-items: flex-end;
 	font-size: 28px;
 }
-#google_logo_child{
-	/* Helps to debug, look at box model in console */
-	padding: 10px;
-}
+/* Google logo size on image and index pages */
 #google_text{
 	font-size: 80px;
 }
+/* For image_search.html styling the logo, putting images under google */
 #google_images{
 	font-size: 15px; 
 	color: #0086f8; 
@@ -60,6 +59,12 @@ body {
 	/* move 'images' text under google logo 0px on the x-axis, 20px up on the y-axis */
 	transform: translate(0px,-20px);
 }
+/* Child element of google_logo element (div) */
+#google_logo_child{
+	/* Helps to debug, look at box model in console */
+	padding: 10px;
+}
+
 #google_search_box{
 	margin-right: auto;
 	margin-left: auto;
@@ -79,6 +84,41 @@ body {
 	In case you want to center text inside search bar too*/
 	
 }
+/* Remove bullet points from list items*/
+li{
+	list-style: none;
+}
+/* remove underline from anchor tags */
+a{	
+	text-decoration: none;
+}		
+
+/* All these property's will stay same for mobile or computer */
+#search_form{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	height: 30%;
+	width: 100%;
+}
+#google_submit, #lucky_submit{
+	/* Match google styling */
+	border: 0 solid black;
+	height: 65%;
+	background-color: #f8f9fa;
+	color: #333437;
+}
+/* Move google submit and lucky submit buttons closer to each other */
+#google_submit{
+	margin-left: 50%;
+}
+#lucky_submit{
+	margin-right: 50%;
+}
+#search_form > div{
+	height: 50%;
+}
+/* Start adding responsiveness to website here */
 @media(min-width: 450px){
 	#google_search_box{
 		height: 300px;
@@ -97,31 +137,6 @@ body {
 		width: 90%;
 	}
 }
-
-#search_form{
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	height: 30%;
-	width: 100%;
-}
-#google_submit{
-	/* Match google styling */
-	border: 0 solid black;
-	height: 65%;
-	background-color: #f8f9fa;
-	color: #333437;
-}
-#search_form > div{
-	height: 50%;
-}
-
-/* 
-#google_footer{
-	display: flex;
-	margin-bottom: auto;
-}
-*/	
 /* For computers */
 @media(min-width: 521px){
 	.flex{
@@ -166,12 +181,3 @@ body {
 	}
 
 }
-
-li{
-	/* Remove bullet points */
-	list-style: none;
-}
-a{	
-	/* remove underline from anchor tags */
-	text-decoration: none;
-}		
