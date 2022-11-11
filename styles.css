@@ -101,7 +101,7 @@ a{
 	height: 30%;
 	width: 100%;
 }
-#google_submit, #lucky_submit{
+#google_submit, #lucky_submit, #image_submit{
 	/* Match google styling */
 	border: 0 solid black;
 	height: 65%;
